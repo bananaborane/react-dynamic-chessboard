@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +42,49 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.size-button-container {
+  margin: 10px;
+}
+
+.size-button-container h3 {
+  margin: 0px 5px;
+}
+
+.each-square {
+  width: 40px;
+  height: 40px;
+}
+
+.chessboard-container {
+  border: black 1px solid;
+}
+
+/* Alternating Chessboard Squares */
+
+.each-row:nth-child(odd) .each-square:nth-child(odd) {
+  background-color: black;
+}
+
+.each-row:nth-child(odd) .each-square:nth-child(even) {
+  background-color: white;
+}
+
+.each-row:nth-child(even) .each-square:nth-child(even) {
+  background-color: black;
+}
+
+.each-row:nth-child(even) .each-square:nth-child(odd) {
+  background-color: white;
 }
