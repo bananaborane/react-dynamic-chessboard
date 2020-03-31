@@ -4,6 +4,12 @@ html {
 
 .App {
   text-align: center;
+  align-items: start;
+  justify-content: center;
+}
+
+.App > div {
+  margin: 30px;
 }
 
 .app-container {
@@ -58,6 +64,28 @@ html {
   flex-direction: row;
 }
 
+.abso {
+  position: absolute;
+}
+
+.chessboard-container {
+  border: 3px dashed black;
+  /* width: 50vw; */
+}
+
+
+.chessboard {
+  z-index: -5;
+}
+
+.chessboard-container h3 {
+  z-index: 5;
+}
+
+.chessboard-pieces {
+  z-index: 5;
+}
+
 .options-container {
   margin: 10px;
 }
@@ -69,11 +97,26 @@ html {
 .each-square {
   width: 40px;
   height: 40px;
+  box-sizing: border-box;
+
 }
 
 .each-piece {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
+  margin: 4px;
+  cursor: pointer;
+  border: black solid 1px;
+  box-sizing: border-box;
+}
+
+.empty-space {
+  width: 32px;
+  height: 32px;
+  margin: 4px;
+  box-sizing: border-box;
+  z-index: 5;
+  
 }
 
 .red-piece {
@@ -94,14 +137,27 @@ html {
   border-radius: 0%;
 }
 
+.clicked-piece {
+  border: 3px dashed yellow;
+}
+
+.suggested-move {
+  background: linear-gradient( lightblue,  lightblue );
+  border: black 2px dashed;
+  cursor: pointer;
+}
+
+.blocked-move {
+  background: linear-gradient( red,  red );
+  border: black 2px dashed;
+  cursor: pointer;
+}
+
 .centered {
   justify-content: center;
   align-items: center;
 }
 
-.chessboard-container {
-  border: black 1px solid;
-}
 
 /* Alternating Chessboard Squares */
 
